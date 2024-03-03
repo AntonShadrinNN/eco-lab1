@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(task1 C)
+project(lab1 C)
 
 set(CMAKE_C_STANDARD 90)
 
@@ -43,7 +43,7 @@ add_library(
 
 
 add_executable(
-        task1
+        lab1
         UnitTestFiles/SourceFiles/EcoLab1.c
         SharedFiles/IdEcoLab1.h
         SharedFiles/IEcoLab1.h
@@ -51,9 +51,9 @@ add_executable(
         HeaderFiles/CEcoLab1Factory.h
 )
 
-target_link_libraries(task1 1F5DF16EE1BF43B999A434ED38FE8F3A)
+target_link_libraries(lab1 1F5DF16EE1BF43B999A434ED38FE8F3A)
 target_link_libraries(
-        task1
+        lab1
         $ENV{ECO_FRAMEWORK}/Eco.InterfaceBus1/BuildFiles/Windows/x86/StaticRelease/00000000000000000000000042757331.lib
         $ENV{ECO_FRAMEWORK}/Eco.MemoryManager1/BuildFiles/Windows/x86/StaticRelease/0000000000000000000000004D656D31.lib
         $ENV{ECO_FRAMEWORK}/Eco.FileSystemManagement1/BuildFiles/Windows/x86/StaticRelease/00000000000000000000000046534D31.lib
