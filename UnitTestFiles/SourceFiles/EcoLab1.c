@@ -4,6 +4,10 @@
 #include "IdEcoInterfaceBus1.h"
 #include "IdEcoFileSystemManagement1.h"
 #include "IdEcoLab1.h"
+#include "IEcoCalculatorY.h"
+#include "IdEcoCalculatorD.h"
+#include "IEcoCalculatorX.h"
+#include "IdEcoCalculatorE.h"
 
 // Вспомогательная структура для передачи в функцию тестирования
 typedef struct binSearch {
@@ -219,6 +223,7 @@ int16_t EcoMain(IEcoUnknown* pIUnk) {
     char_t* copyName = 0;
     /* Указатель на тестируемый интерфейс */
     IEcoLab1* pIEcoLab1 = 0;
+    IEcoCalculatorY* pIY = 0;
 
     /* Проверка и создание системного интрефейса */
     if (pISys == 0) {
@@ -266,7 +271,11 @@ int16_t EcoMain(IEcoUnknown* pIUnk) {
         goto Release;
     }
 
-    
+    result = pIEcoLab1->pVTbl->QueryInterface(pIEcoLab1, &IID_IEcoCalculatorY, (void **) &pIY);
+    if (result != 0 || pIY == 0) {
+        goto Release;
+
+
 
     BinarySearch bsInstances[5] = {
         {"int", compareInt, createAndSortRandomIntArray, freeArrayMem, sizeof(int)},
