@@ -1,27 +1,4 @@
-﻿/*
- * <кодировка символов>
- *   Cyrillic (UTF-8 with signature) - Codepage 65001
- * </кодировка символов>
- *
- * <сводка>
- *   IEcoLab1
- * </сводка>
- *
- * <описание>
- *   Данный заголовок описывает интерфейс IEcoLab1
- * </описание>
- *
- * <ссылка>
- *
- * </ссылка>
- *
- * <автор>
- *   Copyright (c) 2018 Vladimir Bashev. All rights reserved.
- * </автор>
- *
- */
-
-#ifndef __I_ECOLAB1_H__
+﻿#ifndef __I_ECOLAB1_H__
 #define __I_ECOLAB1_H__
 
 #include "IEcoBase1.h"
@@ -33,12 +10,12 @@ static const UGUID IID_IEcoLab1 = {0x01, 0x10, 0x27, 0x7F, 0xC0, 0x0C, 0x35, 0x6
 
 typedef struct IEcoLab1VTbl {
 
-    /* IEcoUnknown */
+    // Unknown
     int16_t (ECOCALLMETHOD *QueryInterface)(/* in */ struct IEcoLab1* me, /* in */ const UGUID* riid, /* out */ void **ppv);
     uint32_t (ECOCALLMETHOD *AddRef)(/* in */ struct IEcoLab1* me);
     uint32_t (ECOCALLMETHOD *Release)(/* in */ struct IEcoLab1* me);
 
-    /* IEcoLab1 */
+    // Lab 1
     size_t (ECOCALLMETHOD *binarySearch)(/* in */ struct IEcoLab1* me, void *arrPrt, size_t size, size_t elemSize, void *target, int (__cdecl *compare)(const void *, const void *));
 
 } IEcoLab1VTbl, *IEcoLab1VTblPtr;
