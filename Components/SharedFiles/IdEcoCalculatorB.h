@@ -4,11 +4,11 @@
  * </кодировка символов>
  *
  * <сводка>
- *   IdEcoLab1
+ *   IdEcoCalculatorB
  * </сводка>
  *
  * <описание>
- *   Данный заголовок описывает интерфейс IdEcoLab1
+ *   Данный заголовок описывает интерфейс IdEcoCalculatorB
  * </описание>
  *
  * <ссылка>
@@ -21,22 +21,22 @@
  *
  */
 
-#ifndef __ID_ECOLAB1_H__
-#define __ID_ECOLAB1_H__
+#ifndef __ID_ECO_CALCULATOR_B_H__
+#define __ID_ECO_CALCULATOR_B_H__
 
 #include "IEcoBase1.h"
-#include "IEcoLab1.h"
+#include "IEcoCalculatorX.h"
 
-/* EcoLab1 CID = {1F5DF16E-E1BF-43B9-99A4-34ED38FE8F3A} */
-#ifndef __CID_EcoLab1
-static const UGUID CID_EcoLab1 = {0x01, 0x10, 0x1F, 0x5D, 0xF1, 0x6E, 0xE1, 0xBF, 0x43, 0xB9, 0x99, 0xA4, 0x34, 0xED, 0x38, 0xFE, 0x8F, 0x3A};
-#endif /* __CID_EcoLab1 */
+/* EcoCalculatorB CID = {AE202E54-3CE5-4550-8996-03BD70C62565} */
+#ifndef __CID_EcoCalculatorB
+static const UGUID CID_EcoCalculatorB = {0x01, 0x10, 0xAE, 0x20, 0x2E, 0x54, 0x3C, 0xE5, 0x45, 0x50, 0x89, 0x96, 0x03, 0xBD, 0x70, 0xC6, 0x25, 0x65};
+#endif /* __CID_EcoCalculatorB */
 
 /* Фабрика компонента для динамической и статической компановки */
 #ifdef ECO_DLL
 ECO_EXPORT IEcoComponentFactory* ECOCALLMETHOD GetIEcoComponentFactoryPtr();
 #elif ECO_LIB
-extern IEcoComponentFactory* GetIEcoComponentFactoryPtr_1F5DF16EE1BF43B999A434ED38FE8F3A;
+extern IEcoComponentFactory* GetIEcoComponentFactoryPtr_AE202E543CE54550899603BD70C62565;
 #endif
 
-#endif /* __ID_ECOLAB1_H__ */
+#endif /* __ID_ECO_CALCULATOR_B_H__ */
